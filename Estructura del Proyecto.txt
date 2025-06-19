@@ -1,0 +1,15 @@
+Estructura del Proyecto
+
+contador-platform/
+├── controllers/
+│   └── authController.js
+├── middleware/
+│   └── authMiddleware.js
+├── models/
+│   └── db.js
+├── routes/
+│   └── authRoutes.js
+├── .env
+├── server.js
+├── package.json
+└── README.md
