@@ -1,5 +1,5 @@
 {
-  "name": "contador-platform",
+  "name": "ContaTool",
   "version": "1.0.0",
   "type": "module",
   "main": "server.js",
