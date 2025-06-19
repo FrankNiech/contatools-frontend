@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>ContaTools - Iniciar sesión / Registrarse</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
 </head>
 <body class="bg-light">
-
   <div class="container mt-5">
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-md-8">
         <div class="card shadow-lg rounded-4">
           <div class="card-body">
             <h3 class="text-center mb-4">🔐 ContaTools</h3>
@@ -21,52 +20,288 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs mb-3" id="tabForm" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Iniciar Sesión</button>
+                <button
+                  class="nav-link active"
+                  id="login-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#login"
+                  type="button"
+                  role="tab"
+                  aria-controls="login"
+                  aria-selected="true"
+                >
+                  Iniciar Sesión
+                </button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">Registrarse</button>
+                <button
+                  class="nav-link"
+                  id="register-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#register"
+                  type="button"
+                  role="tab"
+                  aria-controls="register"
+                  aria-selected="false"
+                >
+                  Registrarse
+                </button>
               </li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
               <!-- Login -->
-              <div class="tab-pane fade show active" id="login" role="tabpanel">
+              <div
+                class="tab-pane fade show active"
+                id="login"
+                role="tabpanel"
+                aria-labelledby="login-tab"
+              >
                 <form id="loginForm">
                   <div class="mb-3">
-                    <label for="loginEmail" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="loginEmail" required>
+                    <label for="loginEmail" class="form-label"
+                      >Correo electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="loginEmail"
+                      required
+                    />
                   </div>
                   <div class="mb-3">
-                    <label for="loginPassword" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="loginPassword" required>
+                    <label for="loginPassword" class="form-label"
+                      >Contraseña</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="loginPassword"
+                      required
+                    />
                   </div>
-                  <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                  <button type="submit" class="btn btn-primary w-100">
+                    Ingresar
+                  </button>
                 </form>
               </div>
 
               <!-- Registro -->
-              <div class="tab-pane fade" id="register" role="tabpanel">
+              <div
+                class="tab-pane fade"
+                id="register"
+                role="tabpanel"
+                aria-labelledby="register-tab"
+              >
                 <form id="registerForm">
-                  <div class="mb-3">
-                    <label for="regName" class="form-label">Nombre completo</label>
-                    <input type="text" class="form-control" id="regName" required>
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <label for="regName" class="form-label">Nombre</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="regName"
+                        name="name"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="regApellidoP" class="form-label"
+                        >Apellido Paterno</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="regApellidoP"
+                        name="apellido_paterno"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="regApellidoM" class="form-label"
+                        >Apellido Materno</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="regApellidoM"
+                        name="apellido_materno"
+                        required
+                      />
+                    </div>
                   </div>
+
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <label for="regFechaNac" class="form-label"
+                        >Fecha de nacimiento</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="regFechaNac"
+                        name="fecha_nacimiento"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-2 mb-3">
+                      <label for="regEdad" class="form-label">Edad</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="regEdad"
+                        name="edad"
+                        readonly
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="regTelefono" class="form-label"
+                        >Teléfono (Opcional)</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="regTelefono"
+                        name="telefono"
+                        placeholder="Ejemplo: 5512345678"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Especialidades (áreas de interés)</label>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="espContabilidad"
+                        name="especialidades"
+                        value="Contabilidad"
+                      />
+                      <label class="form-check-label" for="espContabilidad"
+                        >Contabilidad</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="espFinanzas"
+                        name="especialidades"
+                        value="Finanzas"
+                      />
+                      <label class="form-check-label" for="espFinanzas"
+                        >Finanzas</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="espImpuestos"
+                        name="especialidades"
+                        value="Impuestos"
+                      />
+                      <label class="form-check-label" for="espImpuestos"
+                        >Impuestos</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="espCostos"
+                        name="especialidades"
+                        value="Costos"
+                      />
+                      <label class="form-check-label" for="espCostos">Costos</label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="espAuditoriaFinanciera"
+                        name="especialidades"
+                        value="Auditoría financiera"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="espAuditoriaFinanciera"
+                        >Auditoría financiera</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="espAuditoriaLegal"
+                        name="especialidades"
+                        value="Auditoría Legal"
+                      />
+                      <label class="form-check-label" for="espAuditoriaLegal"
+                        >Auditoría Legal</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="espAuditoriaGubernamental"
+                        name="especialidades"
+                        value="Auditoría Gubernamental"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="espAuditoriaGubernamental"
+                        >Auditoría Gubernamental</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="espControlInterno"
+                        name="especialidades"
+                        value="Control interno"
+                      />
+                      <label class="form-check-label" for="espControlInterno"
+                        >Control interno</label
+                      >
+                    </div>
+                  </div>
+
                   <div class="mb-3">
                     <label for="regEmail" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="regEmail" required>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="regEmail"
+                      name="email"
+                      required
+                    />
                   </div>
+
                   <div class="mb-3">
                     <label for="regPassword" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="regPassword" required>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="regPassword"
+                      name="password"
+                      required
+                    />
                   </div>
-                  <button type="submit" class="btn btn-success w-100">Crear cuenta</button>
+
+                  <button type="submit" class="btn btn-success w-100">
+                    Crear cuenta
+                  </button>
                 </form>
               </div>
             </div>
 
             <div id="message" class="mt-3 text-center"></div>
-
           </div>
         </div>
       </div>
@@ -82,20 +317,35 @@
     // Registro
     document.getElementById("registerForm").addEventListener("submit", async (e) => {
       e.preventDefault();
-      const name = document.getElementById("regName").value;
-      const email = document.getElementById("regEmail").value;
-      const password = document.getElementById("regPassword").value;
 
-      const res = await fetch(`${apiUrl}/register`, {
+      const form = e.target;
+      const formData = new FormData(form);
+
+      // Obtener especialidades como array
+      const especialidades = formData.getAll("especialidades");
+
+      const body = {
+        name: formData.get("name"),
+        apellido_paterno: formData.get("apellido_paterno"),
+        apellido_materno: formData.get("apellido_materno"),
+        fecha_nacimiento: formData.get("fecha_nacimiento"),
+        edad: Number(formData.get("edad")),
+        telefono: formData.get("telefono"),
+        especialidades: especialidades,
+        email: formData.get("email"),
+        password: formData.get("password"),
+      };
+
+      const res = await fetch(`${apiUrl}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify(body),
       });
 
       const data = await res.json();
       document.getElementById("message").innerText = res.ok
         ? "🎉 Registro exitoso, ahora inicia sesión"
-        : "⚠️ " + (data.error || "Ocurrió un error");
+        : "⚠️ " + (data.message || "Ocurrió un error");
     });
 
     // Login
@@ -104,7 +354,7 @@
       const email = document.getElementById("loginEmail").value;
       const password = document.getElementById("loginPassword").value;
 
-      const res = await fetch(`${apiUrl}/login`, {
+      const res = await fetch(`${apiUrl}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -113,16 +363,55 @@
       const data = await res.json();
       document.getElementById("message").innerText = res.ok
         ? "✅ Bienvenido, accediendo..."
-        : "⚠️ " + (data.error || "Credenciales inválidas");
+        : "⚠️ " + (data.message || "Credenciales inválidas");
 
       if (res.ok) {
         localStorage.setItem("token", data.token);
         setTimeout(() => {
-          // Redirigir a dashboard o página interna
-          window.location.href = "/dashboard.html"; // puedes crear esta vista después
+          window.location.href = "/dashboard.html"; // Puedes crear esta vista después
         }, 1200);
       }
     });
+
+
+
+
+
+
+
+
+const fechaNacimientoInput = document.getElementById('regFechaNac');
+const edadInput = document.getElementById('regEdad');
+
+fechaNacimientoInput.addEventListener('change', () => {
+  const fechaNac = new Date(fechaNacimientoInput.value);
+  if (!fechaNac || isNaN(fechaNac)) {
+    edadInput.value = '';
+    return;
+  }
+
+  const hoy = new Date();
+  let edad = hoy.getFullYear() - fechaNac.getFullYear();
+  const mes = hoy.getMonth() - fechaNac.getMonth();
+  const dia = hoy.getDate() - fechaNac.getDate();
+
+  if (mes < 0 || (mes === 0 && dia < 0)) {
+    edad--;
+  }
+
+  edadInput.value = edad >= 0 ? edad : '';
+});
+
+
+
+
+
+
+
+
+
+
+
   </script>
 </body>
 </html>

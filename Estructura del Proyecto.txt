@@ -1,6 +1,6 @@
 Estructura del Proyecto
 
-contador-platform/
+ContaTool/
 ├── controllers/
 │   └── authController.js
 ├── middleware/
@@ -10,6 +10,7 @@ contador-platform/
 ├── routes/
 │   └── authRoutes.js
 ├── .env
+├── index.html
 ├── server.js
 ├── package.json
 └── README.md
